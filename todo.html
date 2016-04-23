@@ -1,0 +1,16 @@
+<div>
+  <div>
+    <form>
+      <input type="text" ng-model="vm.todoTitle" name="todo" placeholder="TODOを入力">
+      <button ng-click="vm.todoCreate()" >TODOを作成</button>
+      <button ng-click="vm.todoDelete()" >完了したTODOを削除</button>
+      <ul>
+        <li ng-repeat="todo in vm.todos">
+          <input type="checkbox" ng-model="todo.done">
+          <span ng-class="{'done': todo.done }">{{todo.title}}</span>
+        </li>
+      </ul>
+    </form>
+  </div>
+
+</div>
